@@ -7,10 +7,14 @@
     <groupId>com.ldbmcs</groupId>
     <artifactId>spring-cloud-examples</artifactId>
     <packaging>pom</packaging>
-    <version>1.0.0</version>
+    <version>0.0.1-SNAPSHOT</version>
 
     <modules>
-        <module></module>
+        <module>spring-cloud-eureka</module>
+<!--        <module>spring-cloud-nacos</module>-->
+<!--        <module>spring-cloud-consul</module>-->
+<!--        <module>spring-cloud-config</module>-->
+<!--        <module>spring-cloud-zuul</module>-->
     </modules>
 
 </project>
