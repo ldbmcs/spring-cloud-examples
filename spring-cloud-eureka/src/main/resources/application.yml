@@ -1,24 +1,29 @@
 server:
   port: 7000
 spring:
+  application:
+    name: eureka-server
   profiles:
     active: dev
 ---
 spring:
-  application:
-    name: eureka-server
+  profiles: dev
   security:
     user:
       name: root  # 配置登录的账号是root
       password: root #配置登录的密码是root
-  profiles: dev
+eureka:
+  client:
+    registerWithEureka: false
+    fetchRegistry: false
 ---
 spring:
-  application:
-    name: eureka-server
+  profiles: test
   security:
     user:
       name: root  # 配置登录的账号是root
       password: root #配置登录的密码是root
-  profiles: test
-
+eureka:
+  client:
+    registerWithEureka: false
+    fetchRegistry: false

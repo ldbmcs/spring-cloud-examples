@@ -13,7 +13,7 @@
         <module>spring-cloud-eureka</module>
 <!--        <module>spring-cloud-nacos</module>-->
 <!--        <module>spring-cloud-consul</module>-->
-<!--        <module>spring-cloud-config</module>-->
+        <module>spring-cloud-config</module>
 <!--        <module>spring-cloud-zuul</module>-->
     </modules>
 
