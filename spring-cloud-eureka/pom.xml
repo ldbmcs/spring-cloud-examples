@@ -7,7 +7,7 @@
     <groupId>com.ldbmcs</groupId>
     <artifactId>spring-cloud-eureka</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>service-registration-and-discovery-service</name>
+    <name>spring-cloud-eureka</name>
     <description>Demo project for Spring Boot</description>
 
     <parent>

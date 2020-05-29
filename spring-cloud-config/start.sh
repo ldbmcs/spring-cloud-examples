@@ -23,7 +23,6 @@ getPID(){
 TIMES=0
 TIMEOUT=20
 EVN=$1
-$PORT=$2
 
 shutdown(){
     getPID
@@ -73,4 +72,5 @@ shutdown(){
 
 shutdown 3
 echo "Service Start ...."
-nohup java -jar -Dspring.profiles.active=$EVN /spring-cloud-config.jar >/log.log 2>&1 &
+nohup java -jar -Dspring.profiles.active=$EVN spring-cloud-config.jar >/log.log 2>&1 &
+tail -f log.log
