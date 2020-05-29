@@ -62,6 +62,7 @@
     </dependencyManagement>
 
     <build>
+        <finalName>spring-cloud-eureka</finalName>
         <plugins>
             <plugin>
                 <groupId>org.springframework.boot</groupId>
