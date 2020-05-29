@@ -16,7 +16,7 @@ services:
       - 7000:7000
     # 挂载目录
     volumes:
-      - /home/spring-cloud-eureka/log1:/app/log
+      - /home/spring-cloud-examples/spring-cloud-eureka/log1:/app/log/
     # 网络桥接
     networks:
       - springCloud
@@ -32,7 +32,7 @@ services:
     networks:
       - springCloud
     volumes:
-      - /home/spring-cloud-config/log:/app/log
+      - /home/spring-cloud-examples/spring-cloud-config/log:/app/log/
     # 等待某服务启动后启动服务
     depends_on:
       - spring-cloud-eureka1
