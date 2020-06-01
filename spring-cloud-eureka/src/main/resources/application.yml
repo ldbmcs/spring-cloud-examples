@@ -18,16 +18,3 @@ eureka:
     registerWithEureka: false
     # 是否从Eureka Server获取注册信息，默认为true。
     fetchRegistry: false
----
-spring:
-  profiles: test
-  security:
-    user:
-      name: root  # 配置登录的账号是root
-      password: root #配置登录的密码是root
-eureka:
-  client:
-    # 是否将自己注册到Eureka Server，默认为true。
-    registerWithEureka: false
-    # 是否从Eureka Server获取注册信息，默认为true。
-    fetchRegistry: false

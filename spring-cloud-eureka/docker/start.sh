@@ -22,7 +22,6 @@ getPID(){
 
 TIMES=0
 TIMEOUT=20
-EVN=$1
 
 shutdown(){
     getPID
@@ -72,5 +71,5 @@ shutdown(){
 
 shutdown 3
 echo "Service Start ...."
-nohup java -jar -Dspring.profiles.active=$EVN spring-cloud-eureka.jar >log/log.log 2>&1 &
+nohup java -jar spring-cloud-eureka.jar >log/log.log 2>&1 &
 tail -f log/log.log

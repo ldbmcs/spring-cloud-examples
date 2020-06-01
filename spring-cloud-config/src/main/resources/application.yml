@@ -29,29 +29,3 @@ eureka:
   instance:
     prefer-ip-address: true
     instance-id: ${spring.cloud.client.ip-address}:${server.port}
----
-spring:
-  profiles: test
-  application:
-    name: lefull-config-server
-  cloud:
-    config:
-      server:
-        git:
-          uri: https://github.com/ldbmcs/spring-cloud-examples.git   # 配置git仓库的地址
-          search-paths: config-repo              # git仓库地址下的相对地址，可以配置多个，用,分割。配置到文件夹底部
-          username: 748761558@qq.com                                 # git仓库的账号
-          password: github.0408                                      # git仓库的密码
-          force-pull: true
-
-eureka:
-  client:
-    security:
-      basic:
-        name: root  # 配置登录的账号是root
-        password: root #配置登录的密码是root
-    serviceUrl:
-      defaultZone: http://${eureka.client.security.basic.name}:${eureka.client.security.basic.password}@spring-cloud-eureka1:7000/eureka/   # 注册中心eurka地址
-  instance:
-    prefer-ip-address: true
-    instance-id: ${spring.cloud.client.ip-address}:${server.port}
