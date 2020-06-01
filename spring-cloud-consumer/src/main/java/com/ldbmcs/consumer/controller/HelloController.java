@@ -1,6 +1,6 @@
 package com.ldbmcs.consumer.controller;
 
-import com.ldbmcs.consumer.feign.ProducerFeign;
+import com.ldbmcs.consumer.feign.HelloService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -10,12 +10,12 @@ import org.springframework.web.bind.annotation.RestController;
 public class HelloController {
 
     @Autowired
-    ProducerFeign producerFeign;
+    HelloService helloService;
 
     @RequestMapping("/hello")
     public String index(@RequestParam String name) {
-        return producerFeign.hello(name);
+        return helloService.hello(name);
     }
-    
+
 }
 

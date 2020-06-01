@@ -9,3 +9,7 @@ eureka:
   instance:
     prefer-ip-address: true
     instance-id: ${spring.cloud.client.ip-address}:${server.port}
+
+feign:
+  hystrix:
+    enabled: true #在Feign中开启Hystrix
