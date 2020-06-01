@@ -1,0 +1,16 @@
+server:
+  port: 7011
+spring:
+  profiles:
+    active: dev
+---
+spring:
+  profiles: dev
+  application:
+    name: spring-cloud-consumer
+  cloud:
+    config:
+      name: spring-cloud-consumer
+      profile: dev
+      label: master
+      uri: http://123.206.196.94:7001

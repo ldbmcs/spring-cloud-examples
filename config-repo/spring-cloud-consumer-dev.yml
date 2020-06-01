@@ -1,0 +1,11 @@
+eureka:
+  client:
+    security:
+      basic:
+        name: root  # 配置登录的账号是root
+        password: root #配置登录的密码是root
+    serviceUrl:
+      defaultZone: http://${eureka.client.security.basic.name}:${eureka.client.security.basic.password}@123.206.196.94:7000/eureka/   # 注册中心eurka地址
+  instance:
+    prefer-ip-address: true
+    instance-id: ${spring.cloud.client.ip-address}:${server.port}
