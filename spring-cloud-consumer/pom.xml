@@ -80,7 +80,7 @@
         </plugins>
         <resources>
             <resource>
-                <directory>docker</directory>
+                <directory>src/main/docker</directory>
                 <targetPath>${project.basedir}/target</targetPath>
                 <includes>
                     <include>Dockerfile</include>
