@@ -5,10 +5,8 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>com.ldbmcs</groupId>
-    <artifactId>spring-cloud-eureka</artifactId>
+    <artifactId>spring-cloud-producer</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>spring-cloud-eureka</name>
-    <description>Demo project for Spring Boot</description>
 
     <parent>
         <groupId>org.springframework.boot</groupId>
@@ -25,27 +23,11 @@
     <dependencies>
         <dependency>
             <groupId>org.springframework.cloud</groupId>
-            <artifactId>spring-cloud-starter-netflix-eureka-server</artifactId>
+            <artifactId>spring-cloud-starter-config</artifactId>
         </dependency>
         <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-test</artifactId>
-            <scope>test</scope>
-            <exclusions>
-                <exclusion>
-                    <groupId>org.junit.vintage</groupId>
-                    <artifactId>junit-vintage-engine</artifactId>
-                </exclusion>
-            </exclusions>
-        </dependency>
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-actuator</artifactId>
-        </dependency>
-        <!--安全验证-->
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-security</artifactId>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-netflix-eureka-client</artifactId>
         </dependency>
     </dependencies>
 
@@ -62,7 +44,7 @@
     </dependencyManagement>
 
     <build>
-        <finalName>spring-cloud-eureka</finalName>
+        <finalName>spring-cloud-producer</finalName>
         <plugins>
             <plugin>
                 <groupId>org.springframework.boot</groupId>
@@ -76,7 +58,7 @@
                 <configuration>
                     <dockerHost>http://123.206.196.94:2375</dockerHost>
                     <imageName>registry.cn-hangzhou.aliyuncs.com/ldbmcs/${project.artifactId}</imageName>
-                    <dockerDirectory>src/main/docker</dockerDirectory>
+                    <dockerDirectory>docker</dockerDirectory>
                     <resources>
                         <resource>
                             <targetPath>/</targetPath>
@@ -90,7 +72,7 @@
         </plugins>
         <resources>
             <resource>
-                <directory>src/main/docker</directory>
+                <directory>docker</directory>
                 <targetPath>${project.basedir}/target</targetPath>
                 <includes>
                     <include>Dockerfile</include>
@@ -105,5 +87,4 @@
             </resource>
         </resources>
     </build>
-
 </project>
