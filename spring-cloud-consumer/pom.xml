@@ -72,7 +72,6 @@
                     </execution>
                 </executions>
                 <configuration>
-                    <dockerHost>http://123.206.196.94:2375</dockerHost>
                     <imageName>registry.cn-hangzhou.aliyuncs.com/ldbmcs/${project.artifactId}</imageName>
                     <dockerDirectory>src/main/docker</dockerDirectory>
                     <resources>
