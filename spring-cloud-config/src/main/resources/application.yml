@@ -18,7 +18,7 @@ spring:
           password: github.0408                                      # git仓库的密码
           force-pull: true
   rabbitmq:
-    host: 127.0.0.1
+    host: 123.206.196.94
     port: 5672
     username: guest
     password: guest
