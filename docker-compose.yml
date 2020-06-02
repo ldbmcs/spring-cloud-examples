@@ -1,22 +1,19 @@
 version: '2'
 services:
   # 自定义服务名
-  spring-cloud-eureka1:
+  spring-cloud-eureka:
     # 总起重启
     restart: always
     # 别名
-    container_name: spring-cloud-eureka1
+    container_name: spring-cloud-eureka
     # 编译DockerFile所在路径
-    build: spring-cloud-eureka
-    # 环境变量
-    environment:
-      SPRING_PROFILES_ACTIVE: dev
+    image: registry.cn-hangzhou.aliyuncs.com/ldbmcs/spring-cloud-eureka
     # 端口映射
     ports:
       - 7000:7000
     # 挂载目录
     volumes:
-      - /home/spring-cloud-examples/spring-cloud-eureka/log1:/app/log/
+      - /home/spring-cloud-examples/spring-cloud-eureka/log:/app/log/
     # 网络桥接
     networks:
       - springCloud
@@ -24,22 +21,20 @@ services:
   spring-cloud-config:
     restart: always
     container_name: spring-cloud-config
-    build: spring-cloud-config
-    environment:
-      SPRING_PROFILES_ACTIVE: dev
+    image: registry.cn-hangzhou.aliyuncs.com/ldbmcs/spring-cloud-config
     ports:
-      - 7005:7001
+      - 7001:7001
     networks:
       - springCloud
     volumes:
       - /home/spring-cloud-examples/spring-cloud-config/log:/app/log/
     # 等待某服务启动后启动服务
     depends_on:
-      - spring-cloud-eureka1
+      - spring-cloud-eureka
     links:
-      - spring-cloud-eureka1
+      - spring-cloud-eureka
 
-# 构建网络环境    
+# 构建网络环境
 networks:
   springCloud:
     driver: bridge
