@@ -1,3 +1,9 @@
+spring:
+  rabbitmq:
+    host: localhost
+    port: 5672
+    username: guest
+    password: guest
 eureka:
   client:
     security:
@@ -13,3 +19,9 @@ eureka:
 feign:
   hystrix:
     enabled: true #在Feign中开启Hystrix
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: 'refresh'
