@@ -13,4 +13,4 @@ spring:
       name: spring-cloud-zuul
       profile: dev
       label: master
-      uri: http://123.206.196.94:7001
+      uri: http://spring-cloud-config:7001

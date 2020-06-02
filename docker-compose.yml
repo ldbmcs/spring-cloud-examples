@@ -34,6 +34,57 @@ services:
     links:
       - spring-cloud-eureka
 
+  spring-cloud-zuul:
+    restart: always
+    container_name: spring-cloud-zuul
+    image: registry.cn-hangzhou.aliyuncs.com/ldbmcs/spring-cloud-zuul
+    ports:
+      - 7002:7002
+    networks:
+      - springCloud
+    volumes:
+      - /home/spring-cloud-examples/spring-cloud-zuul/log:/app/log/
+    depends_on:
+      - spring-cloud-eureka
+      - spring-cloud-config
+    links:
+      - spring-cloud-eureka
+      - spring-cloud-config
+
+  spring-cloud-consumer:
+    restart: always
+    container_name: spring-cloud-consumer
+    image: registry.cn-hangzhou.aliyuncs.com/ldbmcs/spring-cloud-consumer
+    ports:
+      - 7011:7011
+    networks:
+      - springCloud
+    volumes:
+      - /home/spring-cloud-examples/spring-cloud-consumer/log:/app/log/
+    depends_on:
+      - spring-cloud-eureka
+      - spring-cloud-config
+    links:
+      - spring-cloud-eureka
+      - spring-cloud-config
+
+  spring-cloud-producer:
+    restart: always
+    container_name: spring-cloud-producer
+    image: registry.cn-hangzhou.aliyuncs.com/ldbmcs/spring-cloud-producer
+    ports:
+      - 7012:7012
+    networks:
+      - springCloud
+    volumes:
+      - /home/spring-cloud-examples/spring-cloud-producer/log:/app/log/
+    depends_on:
+      - spring-cloud-eureka
+      - spring-cloud-config
+    links:
+      - spring-cloud-eureka
+      - spring-cloud-config
+
 # 构建网络环境
 networks:
   springCloud:
