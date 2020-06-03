@@ -23,6 +23,9 @@ services:
       - /home/spring-cloud-examples/spring-cloud-gateway/log:/app/log/
     depends_on:
       - consul-server
+      - spring-boot-admin
+    links:
+      - spring-boot-admin
 
   spring-boot-admin:
     restart: always
@@ -49,6 +52,9 @@ services:
       - /home/spring-cloud-examples/spring-cloud-consul-consumer/log:/app/log/
     depends_on:
       - consul-server
+      - spring-boot-admin
+    links:
+      - spring-boot-admin
 
   spring-cloud-consul-producer:
     restart: always
@@ -62,6 +68,9 @@ services:
       - /home/spring-cloud-examples/spring-cloud-consul-producer/log:/app/log/
     depends_on:
       - consul-server
+      - spring-boot-admin
+    links:
+      - spring-boot-admin
 
 # 构建网络环境
 networks:
