@@ -11,6 +11,19 @@ services:
     volumes:
       - /opt/docker/consul/data:/consul/data
 
+  spring-cloud-gateway:
+    restart: always
+    container_name: spring-cloud-gateway
+    image: registry.cn-hangzhou.aliyuncs.com/ldbmcs/spring-cloud-gateway
+    ports:
+      - 7014:7014
+    networks:
+      - springCloud-consul
+    volumes:
+      - /home/spring-cloud-examples/spring-cloud-gateway/log:/app/log/
+    depends_on:
+      - consul-server
+
   spring-cloud-consul-consumer:
     restart: always
     container_name: spring-cloud-consul-consumer
