@@ -17,6 +17,8 @@
         <module>spring-cloud-producer</module>
         <module>spring-cloud-consumer</module>
         <module>spring-cloud-zuul</module>
+        <module>spring-cloud-consul-producer</module>
+        <module>spring-cloud-consul-consumer</module>
     </modules>
 
 </project>
