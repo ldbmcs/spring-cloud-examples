@@ -71,5 +71,5 @@ shutdown(){
 
 shutdown 3
 echo "Service Start ...."
-nohup java -jar spring-cloud-config.jar >log/log.log 2>&1 &
+nohup java -Xms50m -Xmx50m -jar spring-cloud-config.jar >log/log.log 2>&1 &
 tail -f log/log.log
