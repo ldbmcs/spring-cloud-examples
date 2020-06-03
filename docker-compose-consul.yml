@@ -1,5 +1,16 @@
 version: '2'
 services:
+  consul-server:
+    restart: always
+    container_name: consul-server
+    image: consul
+    ports:
+      - 8500:8500
+    networks:
+      - springCloud-consul
+    volumes:
+      - /opt/docker/consul/data:/consul/data
+
   spring-cloud-consul-consumer:
     restart: always
     container_name: spring-cloud-consul-consumer
@@ -10,6 +21,8 @@ services:
       - springCloud-consul
     volumes:
       - /home/spring-cloud-examples/spring-cloud-consul-consumer/log:/app/log/
+    depends_on:
+      - consul-server
 
   spring-cloud-consul-producer:
     restart: always
@@ -21,6 +34,8 @@ services:
       - springCloud-consul
     volumes:
       - /home/spring-cloud-examples/spring-cloud-consul-producer/log:/app/log/
+    depends_on:
+      - consul-server
 
 # 构建网络环境
 networks:
