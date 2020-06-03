@@ -5,7 +5,7 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>com.ldbmcs</groupId>
-    <artifactId>spring-cloud-consul-consumer</artifactId>
+    <artifactId>spring-boot-admin</artifactId>
     <version>0.0.1-SNAPSHOT</version>
 
     <parent>
@@ -27,27 +27,15 @@
         </dependency>
         <dependency>
             <groupId>org.springframework.cloud</groupId>
-            <artifactId>spring-cloud-starter-openfeign</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>org.springframework.cloud</groupId>
             <artifactId>spring-cloud-starter-consul-config</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-web</artifactId>
         </dependency>
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-actuator</artifactId>
         </dependency>
         <dependency>
-            <groupId>org.springframework.cloud</groupId>
-            <artifactId>spring-cloud-starter-zipkin</artifactId>
-        </dependency>
-        <dependency>
             <groupId>de.codecentric</groupId>
-            <artifactId>spring-boot-admin-starter-client</artifactId>
+            <artifactId>spring-boot-admin-starter-server</artifactId>
             <version>2.2.3</version>
         </dependency>
     </dependencies>
@@ -65,7 +53,7 @@
     </dependencyManagement>
 
     <build>
-        <finalName>spring-cloud-consul-consumer</finalName>
+        <finalName>spring-boot-admin</finalName>
         <plugins>
             <plugin>
                 <groupId>org.springframework.boot</groupId>
