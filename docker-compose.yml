@@ -73,7 +73,7 @@ services:
     container_name: spring-cloud-producer
     image: registry.cn-hangzhou.aliyuncs.com/ldbmcs/spring-cloud-producer
     ports:
-      - 7012:7012
+      - 7010:7010
     networks:
       - springCloud
     volumes:

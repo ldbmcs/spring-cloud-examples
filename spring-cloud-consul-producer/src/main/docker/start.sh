@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-APPLICATION_MAIN=spring-cloud-consul-consumer.jar
+APPLICATION_MAIN=spring-cloud-consul-producer.jar
 
 #-------------------------------------------------------------------------------------------------------------
 #getPID()-->获取Java应用的PID
@@ -71,5 +71,5 @@ shutdown(){
 
 shutdown 3
 echo "Service Start ...."
-nohup java -Xms50m -Xmx50m -jar spring-cloud-consul-consumer.jar >log/log.log 2>&1 &
+nohup java -Xms50m -Xmx50m -jar spring-cloud-consul-producer.jar >log/log.log 2>&1 &
 tail -f log/log.log

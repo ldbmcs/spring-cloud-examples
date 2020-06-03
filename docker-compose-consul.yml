@@ -1,0 +1,28 @@
+version: '2'
+services:
+  spring-cloud-consul-consumer:
+    restart: always
+    container_name: spring-cloud-consul-consumer
+    image: registry.cn-hangzhou.aliyuncs.com/ldbmcs/spring-cloud-consul-consumer
+    ports:
+      - 7012:7012
+    networks:
+      - springCloud-consul
+    volumes:
+      - /home/spring-cloud-examples/spring-cloud-consul-consumer/log:/app/log/
+
+  spring-cloud-consul-producer:
+    restart: always
+    container_name: spring-cloud-consul-producer
+    image: registry.cn-hangzhou.aliyuncs.com/ldbmcs/spring-cloud-consul-producer
+    ports:
+      - 7013:7013
+    networks:
+      - springCloud-consul
+    volumes:
+      - /home/spring-cloud-examples/spring-cloud-consul-producer/log:/app/log/
+
+# 构建网络环境
+networks:
+  springCloud-consul:
+    driver: bridge
