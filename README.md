@@ -34,3 +34,6 @@ spring-cloud-examples
 ├── spring-cloud-producer -- 生产者服务
 ├── spring-cloud-zuul -- zuul网关服务端
 ```
+## 4. 感谢
+- [SpringBoot-Labs](https://github.com/YunaiV/SpringBoot-Labs):一个涵盖六个专栏：Spring Boot 2.X、Spring Cloud、Spring Cloud Alibaba、Dubbo、分布式消息队列、分布式事务的仓库。
+- [springcloud-learning](https://github.com/macrozheng/springcloud-learning):一套涵盖大部分核心组件使用的Spring Cloud教程，包括Spring Cloud Alibaba及分布式事务Seata，基于Spring Cloud Greenwich及SpringBoot 2.1.7。20篇文章，篇篇精华，30个Demo，涵盖大部分应用场景。
