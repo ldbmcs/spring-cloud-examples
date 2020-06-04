@@ -1,5 +1,5 @@
 ## 1. 简介
-包括大部分核心组件使用的Spring Cloud教程，包括Spring Cloud Alibaba，基于Spring Cloud Greenwich及SpringBoot 2.1.7。
+包括大部分核心组件使用的Spring Cloud教程，包括Spring Cloud Alibaba，基于Spring Cloud Hoxton.SR1及SpringBoot 2.2.2.RELEASE。
 ## 2. 目录
 - Spring Cloud 整体架构概览
 - Spring Cloud Eureka：服务注册与发现
