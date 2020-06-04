@@ -19,6 +19,8 @@
         <module>spring-cloud-consul-consumer</module>
         <module>spring-cloud-gateway</module>
         <module>spring-boot-admin</module>
+        <module>spring-cloud-alibaba-nacos-consumer</module>
+        <module>spring-cloud-alibaba-nacos-producer</module>
     </modules>
 
 </project>
