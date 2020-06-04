@@ -13,8 +13,10 @@
 - Spring Cloud Sleuth：分布式请求链路跟踪
 - Spring Cloud Consul：服务治理与配置中心
 - Spring Cloud Gateway：新一代API网关服务
+- Zuul、Spring Cloud Gateway 网关对比
 - Spring Boot Admin：微服务应用监控
 - Spring Cloud Alibaba：Nacos 作为注册中心和配置中心使用
+- ZooKeeper、Eureka、Consul 、Nacos 微服务注册中心对比
 - Spring Cloud Alibaba：Sentinel实现熔断与限流
 ## 3. 项目结构
 ``` lua
