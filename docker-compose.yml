@@ -34,22 +34,22 @@ services:
     links:
       - spring-cloud-eureka
 
-  spring-cloud-zuul:
-    restart: always
-    container_name: spring-cloud-zuul
-    image: registry.cn-hangzhou.aliyuncs.com/ldbmcs/spring-cloud-zuul
-    ports:
-      - 7002:7002
-    networks:
-      - springCloud
-    volumes:
-      - /home/spring-cloud-examples/spring-cloud-zuul/log:/app/log/
-    depends_on:
-      - spring-cloud-eureka
-      - spring-cloud-config
-    links:
-      - spring-cloud-eureka
-      - spring-cloud-config
+#  spring-cloud-zuul:
+#    restart: always
+#    container_name: spring-cloud-zuul
+#    image: registry.cn-hangzhou.aliyuncs.com/ldbmcs/spring-cloud-zuul
+#    ports:
+#      - 7002:7002
+#    networks:
+#      - springCloud
+#    volumes:
+#      - /home/spring-cloud-examples/spring-cloud-zuul/log:/app/log/
+#    depends_on:
+#      - spring-cloud-eureka
+#      - spring-cloud-config
+#    links:
+#      - spring-cloud-eureka
+#      - spring-cloud-config
 
   spring-cloud-consumer:
     restart: always
