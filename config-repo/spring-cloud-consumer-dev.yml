@@ -31,5 +31,11 @@ management:
       exposure:
         include: 'refresh'
 
+#log
+logging:
+  level:
+    com.baomidou.mybatisplus: INFO
+    com.ldbmcs: INFO
+
 config:
   info: "config info for dev(consumer2)"
